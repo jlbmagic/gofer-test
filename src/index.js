@@ -1,7 +1,10 @@
-//Here we're importing items we'll need. You can add other imports here.
+import { fetchDataGofer, updateDom } from "./utils.js";
 
-//The first function. Remove this.
-const btn = document.querySelector("button");
-btn.onclick = function () {
-  alert("You ran some JavaScript");
+window.loadData = async function () {
+  const btn = document.getElementById("btnFetch");
+  btn.addEventListener("click", updateDom);
+
+  const data = await fetchDataGofer();
+  const outputDiv = document.getElementById("output");
+  outputDiv.innerHTML = JSON.stringify(data, null, 2);
 };

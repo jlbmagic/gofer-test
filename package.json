@@ -19,5 +19,9 @@
     "open": "^8.2.1",
     "parcel": "^2.8.1",
     "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "@proofgeist/fm-webviewer-fetch": "^2.1.0",
+    "fm-gofer": "^1.6.3"
   }
 }
